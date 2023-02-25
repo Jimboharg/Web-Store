@@ -1,0 +1,38 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "workbench.colorCustomizations": {
+    "editorBracketMatch.border": "#FF00FF",
+    "editorBracketPairGuide.background1": "#797D7F",
+    "editorBracketPairGuide.background2": "#797D7F",
+    "editorBracketPairGuide.background3": "#797D7F",
+    "editorBracketPairGuide.background4": "#797D7F",
+    "editorBracketPairGuide.background5": "#797D7F",
+    "editorBracketPairGuide.background6": "#797D7F",
+    "editor.selectionBackground": "#ECF0F1",
+    "editor.lineHighlightBorder": "#ffffff70",
+
+    //"editorUnnecessaryCode.border": "#80dde2",
+
+    "editorWarning.foreground": "#D2B4DE",
+    "editorWarning.border": "#000000",
+    //"editorWarning.background": "#000000",
+
+    //"editorError.foreground": "#000000",
+    "editorError.border": "#000000",
+    //"editorError.background": "#000000",
+
+    //"editorHint.foreground": "#000000",
+    //"editorHint.border": "#000000",
+    //"editorHint.background": "#ECF0F1",
+
+    "editorError.foreground": "#FF3333"
+  },
+  "problems.decorations.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.bracketPairsHorizontal": false
+}

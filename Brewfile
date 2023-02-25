@@ -1,0 +1,5 @@
+tap "dart-lang/dart"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "dart-lang/dart/dart"
