@@ -1,5 +1,5 @@
 import "./cart-dropdown.styles.scss";
-import { useContext } from "react";
+import { useContext, useRef, useEffect } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -11,14 +11,31 @@ import CartItem from "../cart-item/cart-item.component";
 import "./cart-dropdown.styles.scss";
 
 const CartDropdown = () => {
-  const { cartItems, cartPrice } = useContext(CartContext);
+  const { cartItems, cartPrice, setIsCartOpen } = useContext(CartContext);
   const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
     navigate("/checkout");
   };
+
+  const dropDownRef = useRef();
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (!dropDownRef.current?.contains(e.target)) {
+        setIsCartOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   return (
-    <div className="cart-dropdown-container">
+    <div ref={dropDownRef} className="cart-dropdown-container">
       <div className="cart-items">
         {cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />

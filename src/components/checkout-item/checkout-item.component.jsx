@@ -1,11 +1,11 @@
-import "./checkout-item.styles.scss";
-
+import { Link } from "react-router-dom";
 import { useContext } from "react";
-
 import { CartContext } from "../../contexts/cart.context";
 
+import "./checkout-item.styles.scss";
+
 const CheckoutItem = ({ cartItem }) => {
-  const { name, imageUrl, price, quantity } = cartItem;
+  const { id, name, imageUrl, price, quantity } = cartItem;
 
   const { addItemToCart, removeItemFromCart, deleteItemFromCart } =
     useContext(CartContext);
@@ -22,10 +22,10 @@ const CheckoutItem = ({ cartItem }) => {
 
   return (
     <div className="checkout-item-container">
-      <div className="image-container">
+      <Link to={"/item/" + id} className="image-container">
         <img src={imageUrl} alt={`${name}`} />
-      </div>
-      <span className="name">{name}</span>
+      </Link>
+      <Link to={"/item/" + id} className="name">{name}</Link>
       <span className="quantity">
         <div className="arrow" onClick={removeItemHandler}>
           &#10094;
@@ -35,7 +35,7 @@ const CheckoutItem = ({ cartItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">{price}</span>
+      <span className="price">£{price}</span>
       <div className="remove-button" onClick={deleteItemHandler}>
         &#10005;
       </div>

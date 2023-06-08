@@ -1,18 +1,10 @@
-
-.navigation-bar {
-display: flex;
-justify-content: center;
-background-color: lightgrey;
-}
-
 .navigation-container {
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  //margin-bottom: 25px;
+  margin-bottom: 25px;
   background-color: lightgrey;
-  max-width: 1000px;
 
   .logo-container {
     height: 100%;

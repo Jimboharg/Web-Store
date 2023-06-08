@@ -1,9 +1,12 @@
 body {
+ 
   margin: 0;
-  padding: 20px 40px;
-  font-family: "Open Sans", "Lato", "Sans Serif";
+  padding: 0;
+  //padding: 20px 40px;
+  font-family: 'Golos Text', sans-serif, "Open Sans", "Lato", "Sans Serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -18,4 +21,9 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h2 {
+ font-weight: 200;
+ font-size: 40px
 }

@@ -1,6 +1,10 @@
 .auth-container {
+  padding-top: 5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 5rem;
   display: flex;
-  width: 900px;
-  justify-content: space-between;
-  margin: 30px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10rem;  
 }

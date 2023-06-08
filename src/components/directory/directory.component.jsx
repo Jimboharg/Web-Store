@@ -16,30 +16,32 @@ const categories = [
   },
   {
     id: 3,
-    title: "Footwear",
+    title: "Sneakers",
     imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    route: "shop/footwear",
+    route: "shop/sneakers",
   },
   {
     id: 4,
-    title: "Women",
+    title: "Womens",
     imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    route: "shop/women",
+    route: "shop/womens",
   },
   {
     id: 5,
-    title: "Men",
+    title: "Mens",
     imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    route: "shop/men",
+    route: "shop/mens",
   },
 ];
 
 const Directory = () => {
   return (
-    <div className="directory-container">
-      {categories.map((category) => (
-        <DirectoryItem key={category.id} category={category} />
-      ))}
+    <div className="directory-page-container">
+      <div className="directory-container">
+        {categories.map((category) => (
+          <DirectoryItem key={category.id} category={category} />
+        ))}
+      </div>
     </div>
   );
 };

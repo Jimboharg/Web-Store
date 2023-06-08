@@ -55,6 +55,7 @@ export const addCollectionAndDocuments = async (
   collectionName,
   objectsToAdd
 ) => {
+  console.log("addCollectionsAndDocuments ran");
   const collectionRef = collection(db, collectionName);
   const batch = writeBatch(db);
 
@@ -73,7 +74,7 @@ export const getCategoriesAndDocuments = async () => {
   const querySnapshot = await getDocs(q);
   const categoryMap = querySnapshot.docs.reduce((accumulator, docSnapshot) => {
     const { title, items } = docSnapshot.data();
-    console.log("items", items)
+    //console.log("items", items);
     accumulator[title.toLowerCase()] = items;
 
     return accumulator;

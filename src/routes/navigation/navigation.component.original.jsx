@@ -18,7 +18,6 @@ const Navigation = () => {
 
   return (
     <Fragment>
-     <div className="navigation-bar">
       <div className="navigation-container">
         <Link className="logo-container" to="/">
           <CrownLogo className="logo" />
@@ -39,7 +38,6 @@ const Navigation = () => {
           <CartIcon />
         </div>
         {isCartOpen && <CartDropdown />}
-      </div>
       </div>
       <Outlet></Outlet>
     </Fragment>
