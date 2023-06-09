@@ -1,12 +1,14 @@
+* {
+  margin: 0;
+}
+
 body {
- 
   margin: 0;
   padding: 0;
   //padding: 20px 40px;
-  font-family: 'Golos Text', sans-serif, "Open Sans", "Lato", "Sans Serif";
+  font-family: "Golos Text", sans-serif, "Open Sans", "Lato", "Sans Serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
@@ -24,6 +26,6 @@ a {
 }
 
 h2 {
- font-weight: 200;
- font-size: 40px
+  font-weight: 200;
+  font-size: 40px;
 }

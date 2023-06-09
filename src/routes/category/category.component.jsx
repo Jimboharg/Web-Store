@@ -21,7 +21,7 @@ const Category = () => {
     <div className="category-container">
       <div className="category-cards-container">
         <div className="title-container">
-          <h2>{category.toUpperCase()}</h2>
+          <h2 className="title">{category.toUpperCase()}</h2>
         </div>
         <div className="preview">
           {products &&
