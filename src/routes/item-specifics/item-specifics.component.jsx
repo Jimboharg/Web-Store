@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useState } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
 import { CartContext } from "../../contexts/cart.context";
 import { Link } from "react-router-dom";
@@ -11,7 +11,8 @@ import "./item-specifics.styles.scss";
 const ItemSpecifics = () => {
   const { itemId } = useParams();
   const { categoriesMap } = useContext(CategoriesContext);
-  const { addItemToCart, setIsCartOpen, isCartOpen } = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
+  const [buttonText, setButtonText] = useState("Add to Basket");
 
   let productType;
   let product;
@@ -25,24 +26,12 @@ const ItemSpecifics = () => {
     }
   }
 
-  // function findProductFromId(productId) {
-  //   for (const category in categoriesMap) {
-  //     productType = category;
-  //     const catObj = Object.values(categoriesMap[category]);
-  //     const foundProduct = catObj.find(
-  //       (product) => product.id.toString() === productId.toString()
-  //     );
-  //     if (foundProduct) {
-  //       return foundProduct;
-  //     }
-  //   }
-  //   return null;
-  // }
-
-  //const product = findProductFromId(itemId);
-
   const clickHandler = () => {
     addItemToCart(product);
+    setButtonText("Item Added \xa0 \u2713");
+    setTimeout(() => {
+      setButtonText("Add to Basket");
+    }, "1500");
   };
 
   return (
@@ -68,7 +57,7 @@ const ItemSpecifics = () => {
               </p>
               <div className="price-container">
                 <h2>£{product.price}</h2>
-                <Button onClick={clickHandler}>Add to Basket</Button>
+                <Button onClick={clickHandler}>{buttonText}</Button>
               </div>
               <Link to={"/shop/" + productType} className="back-to-category">
                 &#10094; Back to
