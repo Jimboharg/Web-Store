@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { ReactComponent as CrownLogo } from "../../assets/crown.svg";
+import { ReactComponent as Logo } from "../../assets/clothingco.svg";
 import { UserContext } from "../../contexts/user.context";
 import { CartContext } from "../../contexts/cart.context";
 
@@ -21,7 +21,7 @@ const Navigation = () => {
      <div className="navigation-bar">
       <div className="navigation-container">
         <Link className="logo-container" to="/">
-          <CrownLogo className="logo" />
+          <Logo className="logo" />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">

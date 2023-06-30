@@ -15,9 +15,11 @@ background-color: lightgrey;
   max-width: 1000px;
 
   .logo-container {
+    display:flex;
+    align-items: center;
     height: 100%;
-    width: 70px;
-    padding: 15px;
+    width: 400px;
+    padding: 5px;
   }
 
   .nav-links-container {
