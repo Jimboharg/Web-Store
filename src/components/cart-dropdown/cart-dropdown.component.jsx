@@ -11,7 +11,8 @@ import CartItem from "../cart-item/cart-item.component";
 import "./cart-dropdown.styles.scss";
 
 const CartDropdown = () => {
-  const { cartItems, cartPrice, setIsCartOpen } = useContext(CartContext);
+  const { cartItems, cartPrice, setIsCartOpen, cartIconRef } =
+    useContext(CartContext);
   const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
@@ -25,6 +26,9 @@ const CartDropdown = () => {
       if (!dropDownRef.current?.contains(e.target)) {
         setIsCartOpen(false);
       }
+      if (cartIconRef.current.contains(e.target)) {
+        setIsCartOpen(true);
+      }
     };
 
     document.addEventListener("mousedown", handler);
@@ -32,7 +36,7 @@ const CartDropdown = () => {
     return () => {
       document.removeEventListener("mousedown", handler);
     };
-  });
+  }, []);
 
   return (
     <div ref={dropDownRef} className="cart-dropdown-container">

@@ -1,8 +1,7 @@
-
 .navigation-bar {
-display: flex;
-justify-content: center;
-background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
 }
 
 .navigation-container {
@@ -15,23 +14,31 @@ background-color: lightgrey;
   max-width: 1000px;
 
   .logo-container {
-    display:flex;
+    display: flex;
     align-items: center;
-    height: 100%;
-    width: 400px;
+    // height: 100%;
+    // width: clamp(200px, 30vw, 500px);
+    width: 50%;
     padding: 5px;
   }
 
   .nav-links-container {
-    width: 60%;
+    width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    // justify-content: space-around;
 
     .nav-link {
-      padding: 10px 15px;
+     
+      margin-right: clamp(0.5rem, 3vw, 5rem);
       cursor: pointer;
+      font-size: clamp(0.7rem, 1.6vw, 1.2rem);
+      
     }
+  }
+  .cart-icon-container {
+    margin-right: 1rem;
   }
 }

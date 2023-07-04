@@ -41,6 +41,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [cartPrice, setCartPrice] = useState(0);
+  const [cartIconRef, setCartIconRef] = useState({});
 
   useEffect(() => {
     const totalItems = cartItems.reduce(
@@ -80,6 +81,7 @@ export const CartProvider = ({ children }) => {
     cartItems,
     cartTotal,
     cartPrice,
+    cartIconRef, setCartIconRef
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
